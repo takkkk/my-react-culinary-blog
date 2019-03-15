@@ -1,0 +1,131 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  font-size: 20px;
+  background-color: #FFC82E;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: superclarendon, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.Hero {
+  background:url('../images/kale-salad.png');
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.HeroGroup {
+  margin: 0 auto;
+  /* max-width: 500px; */
+  padding: 350px 50px;
+  text-align: center;
+}
+
+.Hero h1 {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-family: superclarendon, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1)
+}
+
+.Hero p {
+  color: rgb(255, 255, 255);
+  font-family: superclarendon, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  opacity: 0;
+  margin: 30px;
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero a {
+  color: rgb(255, 255, 255);
+  font-family: superclarendon, serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,0.7);
+  padding: 9px 15px;
+  border-radius: 20px;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero a:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 640px) {
+  .HeroGroup {
+    padding: 230px 20px;
+  }
+  .Hero h1 {
+    font-size: 30px;
+  }
+
+}
+
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.CardsGroup {
+  
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+  justify-items: center;
+  
+
+  
+}
+
+@media (max-width: 1060px) {
+  .CardsGroup {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .CardsGroup {
+    grid-template-columns: auto;
+    
+  }
+  
+}
+
+/* 如何让屏幕调整大小后 cards 跟着 kale 变化， */

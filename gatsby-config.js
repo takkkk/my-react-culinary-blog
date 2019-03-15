@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'TUZEI Blog',
+    title: 'TA-KITCHEN Culinary Delights',
   },
   plugins: ['gatsby-plugin-react-helmet'],
 }

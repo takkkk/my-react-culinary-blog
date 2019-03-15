@@ -1,0 +1,63 @@
+.Card {
+    /* width: 466px;
+    height: 636px; */
+    /* width: 100%; */
+    width: 466px;
+    height: 636px;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 20px; */
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    justify-items: center;
+    top: 10px;
+    
+}
+
+.Card img {
+    position: absolute;
+    /* width: 100%; */
+    /* top: 10px; */
+    /* height: 110%; */
+    /* margin: 10px; */
+    /* border: solid 10px white; */
+    z-index: -1;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover img {
+    opacity: 0.9;
+}
+
+.Card P {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: clarendon, serif;
+    font-style: italic;
+    font-weight: 400;
+    align-self: start;
+    margin: 0 0 20px 0;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover p {
+    transform: scale(1.2);
+}
+
+.Card h3 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: clarendon, serif;
+    font-style: normal;
+    font-weight: 400;
+    width: 400px;
+    text-align: center;
+    align-self: end;
+    margin: 0 0 50px 0;  
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover h3 {
+    transform: scale(1.1);
+}
+
