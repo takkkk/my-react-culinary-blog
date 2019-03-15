@@ -98,7 +98,7 @@ a {
 
 .Hero svg {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
 }
 
