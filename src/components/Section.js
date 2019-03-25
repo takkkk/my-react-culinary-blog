@@ -1,9 +1,9 @@
-// import React from 'react'
-// import styled from 'styled-components'
+import React from 'react'
+import styled from 'styled-components'
 
-// const Section = props => (
-//     <SectionGroup>
+const Section = props => (
+    <SectionGroup>
         
-//     </SectionGroup>
-// )
-// export default Section
+    </SectionGroup>
+)
+export default Section

@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
+import Wave from './wave';
 
 const CellGroup = styled.div`
     display: grid;
+    ${'' /* background-color: black; */}
     ${'' /* grid-template-columns: 200px auto; */}
     ${'' /* grid-gap: 25px; */}
     align-items: center;
@@ -12,6 +14,7 @@ const CellGroup = styled.div`
                          '. CellImage CellTitle .';
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1.2fr 1fr 1fr;
+    position: relative;
     
 `
 
@@ -57,8 +60,16 @@ const CellSectionTitle = styled.div`
     
 `
 
+// const WaveBottom = styled.div`
+//     position: absolute;
+//     width: 100%;
+//     top: 20;
+//     transform: rotate(180deg);
+// `
+
 const Cell = props => (
     <CellGroup>
+        {/* <WaveBottom><Wave /></WaveBottom> */}
         <CellImage image={props.image}></CellImage>
         <CellSectionTitle>{props.sectionTitle}</CellSectionTitle>
         <CellTitle>{props.title}</CellTitle>
