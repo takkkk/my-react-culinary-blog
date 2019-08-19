@@ -4,24 +4,29 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './index.css'
+import Footer from '../components/Footer';
+
 
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: data.site.siteMetadata.description },
-        { name: 'keywords', content: data.site.siteMetadata.keywords },
+        { name: 'description', content: data.site.siteMetadata.description},
+        { name: 'keywords', content: data.site.siteMetadata.keywords},
       ]}
     />
     <Header />
-      {children()}
+    {children()}
+    <Footer data={data}> 
+      Delightful to see you here. <a href="mailto:takazau@gmail.com">Email me</a> to ask anything! © 2019
+    </Footer> 
   </div>
 )
 
 Layout.propTypes = {
   children: PropTypes.func,
-}
+}   
 
 export default Layout
 
@@ -32,6 +37,15 @@ export const query = graphql`
         title
         description
         keywords 
+      }
+    }
+    allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
+      edges{
+        node{
+          title
+          url
+          createdAt
+        }
       }
     }
   }
